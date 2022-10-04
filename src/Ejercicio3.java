@@ -7,16 +7,18 @@ import java.util.Set;
 public class Ejercicio3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String proceso;
+        String[] comando;
         System.out.println("Introduzca el programa a ejecutar");
-        proceso = sc.next();
-        ProcessBuilder pb = new ProcessBuilder("Java", proceso);
+        comando = sc.nextLine().split(" ");
+        ProcessBuilder pb = new ProcessBuilder(comando);
         pb.directory(new File("C:\\Users\\mdevos\\Desktop\\Programación de Servicios y Procesos\\Unidad1-PSPRO\\src"));
         System.out.println("Voy a lanzar el proceso");
         pb.inheritIO();
         try {
             Process p = pb.start();
-        } catch (IOException e) {
+            p.waitFor();
+            System.out.println("Proceso terminado");
+        } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
