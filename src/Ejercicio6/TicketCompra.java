@@ -12,7 +12,7 @@ public class TicketCompra {
         precioProducto = s.nextDouble();
         cantProducto = s.nextInt();
         totalProducto = cantProducto * precioProducto;
-        System.out.printf("%s - %s - %s - %s\n", codProducto, precioProducto, cantProducto, totalProducto);
+        System.out.printf("%d - %.2f - %d - %.2f\n", codProducto, precioProducto, cantProducto, totalProducto);
         s.close();
     }
 
