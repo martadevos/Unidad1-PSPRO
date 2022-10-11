@@ -3,7 +3,7 @@ package Ejercicio4;
 import java.io.File;
 import java.io.IOException;
 
-public class Actividad4 {
+public class LanzaProcesoLento {
 
     public static void main(String[] args) {
         ProcessBuilder pb = new ProcessBuilder("Java","ProcesoLento.java");

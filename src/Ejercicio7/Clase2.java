@@ -4,20 +4,25 @@ import java.util.Scanner;
 
 public class Clase2 {
     public static void main(String[] args) {
+        //Declara variables
         Scanner s = new Scanner(System.in);
-        String[] ip = new String[10];
-        String[] ipSeparada= new String[4];
-        int[] numsIp= new int[4];
-        for (int i = 0; i<ip.length; i++){
-            ip[i] = s.nextLine();
-        }
-        for (int i=0; i<ip.length;i++){
-            ipSeparada = ip[i].split("\\.");
-            for (int j=0; j<numsIp.length; j++) {
-                numsIp[j] = Integer.parseInt(ipSeparada[j]);
+        String ip;
+        String[] ipSeparada;
+        int numsIp;
+        //Repite 10 veces
+        for (int i = 0; i < 10; i++) {
+            //Lee una línea y la mete en una cadena
+            ip = s.nextLine();
+            //Separa la cadena en los puntos
+            ipSeparada = ip.split("\\.");
+            //Pasa a entero el primer número de la cadena
+            numsIp = Integer.parseInt(ipSeparada[0]);
+            //Si el número está entre 0 y 223 lo escribe en pantalla
+            if (numsIp >= 0 && numsIp <= 223) {
+                System.out.println(ip);
             }
-            if () {
-            }
         }
+        //Cierra el escáner
+        s.close();
     }
 }
