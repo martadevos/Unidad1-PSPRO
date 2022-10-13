@@ -8,7 +8,7 @@ public class LanzaPreguntaNombre {
         String entrada, salida;
         Runtime rt = Runtime.getRuntime();
         //Declara un array con el comando ¡¡¡¡¡IMPORTANTE!!!!! poner la ruta de la clase java, no solo "nombreClase.java"
-        String[] comando = {"Java","/Users/marta/IdeaProjects/Unidad1-PSPRO/src/Ejercicio5/PreguntaNombre.java"};
+        String[] comando = {"Java","src\\Ejercicio5\\PreguntaNombre.java"};
         try {
             //Inicia el proceso lento
             Process p = rt.exec(comando);
@@ -19,7 +19,7 @@ public class LanzaPreguntaNombre {
             InputStream is = p.getInputStream();
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader leerSalida = new BufferedReader(isr);
-            BufferedReader leerEntrada = new BufferedReader(new FileReader("/Users/marta/IdeaProjects/Unidad1-PSPRO/src/Ejercicio9/entradaNombre.txt"));
+            BufferedReader leerEntrada = new BufferedReader(new FileReader("src\\Ejercicio9\\entradaNombre.txt"));
             //Lee la la entrada del fichero
             entrada = leerEntrada.readLine();
             //Pasa la entrada a la clase
